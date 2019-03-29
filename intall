@@ -1,0 +1,12 @@
+
+ yum -y remove kubernetes-cni.x86_64
+ 
+  yum list kube --showduplicates|grep "^doc"|sort -r  
+  
+  yum list installed | grep kube  
+  
+   yum install -y  kubeadm-1.12.3 kubectl-1.12.3
+   
+  
+  
+    kubeadm join 192.168.0.60:6443 --token cjkqwq.ecmhh0urcpcj92yo --discovery-token-ca-cert-hash sha256:acb2b1072392fcfc7bc09786451380859801a75beb9b39d904a71d615d38588c
